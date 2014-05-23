@@ -4,19 +4,21 @@ require "nokogiri"
 
 
 #you can fill the url array with all the hashtags you want info on
-<<<<<<< HEAD
-url = ["surf", "surfing", "surfboard", "surfer", "hangloose", "chill", "beach", "surfsup", "aloha", "travel", "extreme", "redbull", "billabong", "roxy", "oakley", "quiksilver", "ripcurl", "australia", "hawaii", "california", "miami", "sand", "sea", "ocean", "reef", "wave", "waves", "wetsuit", "hurley", "gopro", "motheranddaughter", "california", "photoshoot", "photos", "thegettycenter", "losangeles", "california", "California", "DriverlessCars", "SmartGlassFans", "ReviewTheBest", "hustleseasoncollection", "hustleseasonthebrand", "only1season", "designer", "streetwear", "style", "clothingline", "newyork", "california", "florida", "miami", "atlanta", "toyko", "dubai", "france", "paris", "huntingtonbeach", "losangeles", "pool", "sun", "surfcity", "california", "relax", "beachday", "beautiful", "beachlife", "overcast", "flower", "weeds", "summerhasarrived", "ocean", "norcalbeach", "california", "californiadream", "californialove", "mylife", "livehappiness", "breakfast", "food", "foodporn", "hillcrest", "sandiego", "california", "mimosa", "coffee", "tbt", "SpringBreak", "LegDay", "ClearLake", "California", "Stoner", "Fitness", "money", "racks", "takeiteasy", "lovesvoice", "tbt", "tbt", "ocean", "monterey", "california", "bestfriend", "lover", "bitch", "comeback", "loveyou", "hoe", "perfect", "view", "kisses", "smiles", "HarleyDavidson", "RoadGlideUltra", "Harley", "touring", "roadglide", "riversideharley", "riverside", "california", "kingline", "kinglinebullies", "kingline_bullies", "kuwaitbullies", "disney", "california", "californiaadventure", "paradisepier"]
-fp = File.new("Autobot9.txt", "w")
-=======
+puts ""
+puts ""
+
 time = Time.new
-url = ["karmaloop", "crooksandcastles", "hat", "snapback", "croc", "style", "swag", "wdywt", "kotd", "diamondsupply", "diamondlife", "blackscale", "obey", "lrg", "rocksmith", "pinkdolphin", "asos", "urbanoutfitters", "jordan", "crooks", "college", "ootd", "makeup", "huf", "high", "skateboarding", "strapback", "trukfit", "team", "pro", "surfing", "town", "city", "carver", "enjoy", "style", "respect", "canarias", "canaryislands", "enjoy", "longboarding", "skateboarding", "spot", "secret", "oldchool", "skate", "skatelife", "skateboarding", "skate", "skateboard", "skateboarding", "deck", "instant", "skateboarding", "skating", "skate", "fuckafilter", "triplex", "gnarly", "fun", "florida", "hyped", "birthday", "bday", "sk8", "skateboarding", "skating", "nothing", "forever", "skateboarding", "skating", "skater", "hashgram", "instaskater", "sk8", "sk8er", "sk8ing", "sk8ordie", "photooftheday", "board", "longboard", "longboarding", "riding", "kickflip", "ollie", "instagood", "wheels", "skatephotoaday", "skateanddestroy", "skateeverydamnday", "skatespot", "skaterguy", "skatergirl", "skatepark", "skateboard", "throwback", "skateboarding", "skateboarding", "skatepark", "skateordie", "playground", "tbt", "frontsideair", "skateboarding", "livermore", "skatepark", "chapter", "chapterharajuku", "chapterworld", "nike", "nikesb", "nikeskateboarding", "skateboarding", "lunar", "gato", "lunargato", "wc", "fifaworldcup", "france", "football", "soccer", "sneaker", "footwear", "kicksoftheday", "kicksfortoday", "todayskicks", "sneakerheads", "sneakerchick", "kickstagram", "kickflipping", "stairs", "hingham", "skatepark", "skateboarding", "skateboarding"]
+url = ["decim8", "thou_shall_decim8", "the_abstract_collective", "abstract", "abstractobsession", "abstractors_anonymous", "ma_creative", "surreal42", "abstracteyesat42", "jj_abstract", "rsa_graphics", "sbe_graphics", "pf_arts", "exk_arts", "ampt_surreal", "lightedlight", "u_b_e", "destroy2cre8", "mobileartistry", "ig_artis", "artistz_united", "whostagram", "e_wiz_mems", "abstractors_anonymous", "cs_ag", "jj_abstract", "pf_graphics", "design42", "abstracteyesat42", "sbe_graphics", "electronicsocialart", "cs_abstract", "cf_graphics", "not4ordinary", "gi_artwork", "Africa", "ig_photoflair_graphics", "contemporaryart", "the_abstract_collective", "abstractors_anonymous", "abstracteyesat42", "applifam23may", "abstracteyesat42", "abstractors_anonymous", "artistz_united", "photo_rush", "photo_best11", "shutterbug_abstract", "not4ordinary", "the_abstract_collective", "gpwoot", "hubcreative", "you_nique_edits", "wiggteam", "arteemfoco", "arte_of_nature", "at_diff", "abstracteyesat42", "abstractors_anonymous", "cs_abstract", "shutterbug_abstract", "sbe_graphics", "pf_graphics", "hubcreative", "arte_of_nature", "artistz_united", "arteemfoco", "at_diff", "gpwoot", "you_nique_edits", "not4ordinary", "the_abstract_collective", "surreal42", "surreal42fb", "tos_surrealfantasy", "friendsinshadowandlight", "applifam23may", "artistz_united", "whostagram", "e_wiz_mems", "abstractors_anonymous", "cs_ag", "jj_abstract", "pf_graphics", "design42", "abstracteyesat42", "sbe_graphics", "electronicsocialart", "cs_abstract", "cf_graphics", "not4ordinary", "gi_artwork", "artistz_united", "whostagram", "e_wiz_mems", "abstractors_anonymous", "cs_ag", "jj_abstract", "pf_graphics", "design42", "abstracteyesat42", "sbe_graphics", "electronicsocialart", "cs_abstract", "cf_graphics", "not4ordinary", "gi_artwork", "artistz_united", "whostagram", "e_wiz_mems", "abstractors_anonymous", "cs_ag", "jj_abstract", "pf_graphics", "design42", "abstracteyesat42", "sbe_graphics", "electronicsocialart", "cs_abstract", "cf_graphics", "not4ordinary", "gi_artwork", "artistz_united", "whostagram", "e_wiz_mems", "abstractors_anonymous", "cs_ag", "jj_abstract", "pf_graphics", "design42", "abstracteyesat42", "sbe_graphics", "electronicsocialart", "cs_abstract", "cf_graphics", "not4ordinary", "gi_artwork", "artistz_united", "whostagram", "e_wiz_mems", "abstractors_anonymous", "cs_ag", "jj_abstract", "pf_graphics", "design42", "abstracteyesat42", "sbe_graphics", "electronicsocialart", "cs_abstract", "cf_graphics", "not4ordinary", "gi_artwork", "artistz_united", "whostagram", "e_wiz_mems", "abstractors_anonymous", "cs_ag", "jj_abstract", "pf_graphics", "design42", "abstracteyesat42", "sbe_graphics", "electronicsocialart", "cs_abstract", "cf_graphics", "not4ordinary", "gi_artwork", "artistz_united", "whostagram", "e_wiz_mems", "abstractors_anonymous", "cs_ag", "jj_abstract", "pf_graphics", "design42", "abstracteyesat42", "sbe_graphics", "electronicsocialart", "cs_abstract", "cf_graphics", "not4ordinary", "gi_artwork", "artistz_united", "whostagram", "e_wiz_mems", "abstractors_anonymous", "cs_ag", "jj_abstract", "pf_graphics", "design42", "abstracteyesat42", "sbe_graphics", "electronicsocialart", "cs_abstract", "cf_graphics", "not4ordinary", "gi_artwork", "artistz_united", "whostagram", "e_wiz_mems", "abstractors_anonymous", "cs_ag", "jj_abstract", "pf_graphics", "design42", "abstracteyesat42", "sbe_graphics", "electronicsocialart", "cs_abstract", "cf_graphics", "not4ordinary", "gi_artwork"]
 fp = File.new("Auto#{time.month}#{time.day}#{time.year}#{time.hour}#{time.min}.txt", "w")
->>>>>>> takeputsout
+
+puts "Scraping to file #{fp} begin..."
+puts ""
 
 agent = Mechanize.new { |agent| agent.user_agent_alias = "Mac Safari" }
 
-url.each do |i|
+url.each_with_index do |i, ind|
 	
+	indexi = ind + 1
 	#loads each page using the array "url"
 	
 	html = agent.get("http://ink361.com/app/tag/#{i}").body
@@ -83,8 +85,10 @@ url.each do |i|
 	fp.write("\n")
 	sleeper = Random.rand(2...5)
 	sleep(sleeper)
-	puts "#{i} Scraped Succesfully"
+	puts "#{i.upcase} scraped succesfully, #{indexi} of #{url.count}"
 end
+puts "--COMPLETE--"
+puts ""
 
 
 
