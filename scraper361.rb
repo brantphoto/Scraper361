@@ -4,8 +4,9 @@ require "nokogiri"
 
 
 #you can fill the url array with all the hashtags you want info on
-url = ["inspiration", "motivational", "helloworld"]
-fp = File.new("Autobot8.txt", "w")
+
+url = ["inspirational"]
+fp = File.new("Autobot14.txt", "w")
 
 agent = Mechanize.new { |agent| agent.user_agent_alias = "Mac Safari" }
 
@@ -28,44 +29,28 @@ url.each do |i|
 	#works for 1.6K, 1.6M, 1.6B (Thousand,Million,Billion)
 	
 	list = html_doc.xpath("//*[(@id = 'mediaCount')]")
-	puts "list: #{list}"
 	liststring = list.to_s
-	puts "liststring: #{liststring}"
 	listscan = liststring.scan(/>(.+)</)
-	puts "listscan: #{listscan}"
 	listtitle = listscan[0].to_s.delete!("[]")
-	puts "listtitle: #{listtitle}"
 	if listtitle.include?("K") == true
 		realnumber = listtitle.delete("K")
-		puts "no K: #{realnumber}"
 		realnumber = realnumber.delete!('""').to_f
-		puts "No hash: #{realnumber}"
 		realnumber = realnumber * 1000.0
-		puts "Bigger float: #{realnumber}"
 		realnumber = realnumber.to_i
-		puts "Bigger Int: #{realnumber}"
 		fp.write(realnumber)
 		fp.write("\t")
 	elsif listtitle.include?("M") == true
 		realnumber = listtitle.delete("M")
-		puts "no K: #{realnumber}"
 		realnumber = realnumber.delete!('""').to_f
-		puts "No hash: #{realnumber}"
 		realnumber = realnumber * 1000000.0
-		puts "Bigger float: #{realnumber}"
 		realnumber = realnumber.to_i
-		puts "Bigger Int: #{realnumber}"
 		fp.write(realnumber)
 		fp.write("\t")
 	elsif listtitle.include?("B") == true
 		realnumber = listtitle.delete("B")
-		puts "no K: #{realnumber}"
 		realnumber = realnumber.delete!('""').to_f
-		puts "No hash: #{realnumber}"
 		realnumber = realnumber * 1000000000.0
-		puts "Bigger float: #{realnumber}"
 		realnumber = realnumber.to_i
-		puts "Bigger Int: #{realnumber}"
 		fp.write(realnumber)
 		fp.write("\t")
 	else
@@ -77,9 +62,7 @@ url.each do |i|
 	#gets all hastags found (related hastags) on that hastag page. All are in "" with , seperating
 	
 	list = html_doc.xpath("//*[contains(concat( ' ', @class, ' ' ), concat( ' ', 'medcaption', ' ' ))]")
-	puts list
 	liststring = list.to_s
-	puts liststring
 	regex = /#([a-zA-Z]\w+)/
 	finallist = []
 	liststring.scan(/#([a-zA-Z]\w+)/) do
@@ -92,10 +75,10 @@ url.each do |i|
 
 	# creates a new line in the txt file (mac) which creates a new row.
 	# the program  then waits a random amount of seconds before looping the next string in the array.
-	print finallist
 	fp.write("\n")
 	sleeper = Random.rand(2...5)
 	sleep(sleeper)
+	puts "#{i} Scraped Succesfully"
 end
 
 
