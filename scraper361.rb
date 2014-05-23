@@ -4,8 +4,8 @@ require "nokogiri"
 
 
 #you can fill the url array with all the hashtags you want info on
-url = ["inspiration", "motivational", "helloworld"]
-fp = File.new("Autobot8.txt", "w")
+url = ["surf", "surfing", "surfboard", "surfer", "hangloose", "chill", "beach", "surfsup", "aloha", "travel", "extreme", "redbull", "billabong", "roxy", "oakley", "quiksilver", "ripcurl", "australia", "hawaii", "california", "miami", "sand", "sea", "ocean", "reef", "wave", "waves", "wetsuit", "hurley", "gopro", "motheranddaughter", "california", "photoshoot", "photos", "thegettycenter", "losangeles", "california", "California", "DriverlessCars", "SmartGlassFans", "ReviewTheBest", "hustleseasoncollection", "hustleseasonthebrand", "only1season", "designer", "streetwear", "style", "clothingline", "newyork", "california", "florida", "miami", "atlanta", "toyko", "dubai", "france", "paris", "huntingtonbeach", "losangeles", "pool", "sun", "surfcity", "california", "relax", "beachday", "beautiful", "beachlife", "overcast", "flower", "weeds", "summerhasarrived", "ocean", "norcalbeach", "california", "californiadream", "californialove", "mylife", "livehappiness", "breakfast", "food", "foodporn", "hillcrest", "sandiego", "california", "mimosa", "coffee", "tbt", "SpringBreak", "LegDay", "ClearLake", "California", "Stoner", "Fitness", "money", "racks", "takeiteasy", "lovesvoice", "tbt", "tbt", "ocean", "monterey", "california", "bestfriend", "lover", "bitch", "comeback", "loveyou", "hoe", "perfect", "view", "kisses", "smiles", "HarleyDavidson", "RoadGlideUltra", "Harley", "touring", "roadglide", "riversideharley", "riverside", "california", "kingline", "kinglinebullies", "kingline_bullies", "kuwaitbullies", "disney", "california", "californiaadventure", "paradisepier"]
+fp = File.new("Autobot9.txt", "w")
 
 agent = Mechanize.new { |agent| agent.user_agent_alias = "Mac Safari" }
 
